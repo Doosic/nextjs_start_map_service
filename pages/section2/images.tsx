@@ -56,6 +56,50 @@ const Images: NextPage = () => {
         />
         <figcaption>v13 image</figcaption>
       </figure>
+
+      {/* <figure>
+        <img
+          src="/example.jpg"
+          alt="example"
+          width={500}
+          height={100}
+          loading="lazy"
+        />
+        <figcaption>example img</figcaption>
+      </figure>
+
+      <h1>next/image</h1>
+
+      <figure>
+        <LegacyImage
+          src={example}
+          alt="v13 image"
+          width={500}
+          height={100}
+          placeholder="blur"
+        />
+        <figcaption>v13 image</figcaption>
+      </figure>
+
+      <figure>
+        <LegacyImage
+          src="https://lecture-1.vercel.app/example.jpg"
+          alt="v13 image"
+          width={500}
+          height={100}
+        />
+        <figcaption>v13 image</figcaption>
+      </figure>
+
+      <figure style={{ position: 'relative', width: '500px', height: '100px' }}>
+        <LegacyImage
+          src="https://lecture-1.vercel.app/example.jpg"
+          alt="v13 image"
+          layout="fill"
+          style={{ objectFit: 'cover' }}
+        />
+        <figcaption>v13 image</figcaption>
+      </figure> */}
     </main>
   );
 };

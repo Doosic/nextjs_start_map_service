@@ -4,7 +4,12 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['lecture-1.vercel.app'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.**.**',
+      },
+    ],
   },
 };
 
