@@ -5,8 +5,15 @@ import styles from '../styles/header.module.scss';
 import Link from 'next/link';
 import { AiOutlineShareAlt } from 'react-icons/ai';
 import { VscFeedback } from 'react-icons/vsc';
+import { Store } from '../types/store';
+import useStore from '../hooks/useStores';
+import { NextPage } from 'next';
 
-export default function Home() {
+interface Props {
+  stores: Store[];
+}
+
+const Home: NextPage<Props> = ({ stores }) => {
   return (
     <Fragment>
       <Header
@@ -30,4 +37,16 @@ export default function Home() {
       </main>
     </Fragment>
   );
+};
+
+export default Home;
+
+export async function getStaticProps() {
+  /** TODO: next api routes로 불러오기 */
+  const stores = (await import('../public/stores.json')).default;
+
+  return {
+    props: { stores },
+    revalidate: 60 * 60,
+  };
 }
