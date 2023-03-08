@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import type { Marker } from '../../types/map';
 
-const Marker = ({ map, coordinates, onClick }: Marker): null => {
+const Marker = ({ map, coordinates, icon, onClick }: Marker): null => {
   useEffect(() => {
     let marker: naver.maps.Marker | null = null;
     if (map) {
@@ -9,6 +9,7 @@ const Marker = ({ map, coordinates, onClick }: Marker): null => {
       marker = new naver.maps.Marker({
         map: map,
         position: new naver.maps.LatLng(...coordinates),
+        icon,
       });
     }
 
