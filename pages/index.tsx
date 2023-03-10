@@ -2,6 +2,7 @@ import { Fragment, useEffect } from 'react';
 import MapSection from '../components/home/MapSection';
 import HomeHeader from '../components/home/Header';
 import { Store } from '../types/store';
+import DetailSection from '../components/home/DetailSection';
 import useStores from '../hooks/useStores';
 import { NextPage } from 'next';
 
@@ -19,8 +20,16 @@ const Home: NextPage<Props> = ({ stores }) => {
   return (
     <Fragment>
       <HomeHeader />
-      <main style={{ width: '100%', height: '100%' }}>
+      <main
+        style={{
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          overflow: 'hidden',
+        }}
+      >
         <MapSection />
+        <DetailSection />
       </main>
     </Fragment>
   );
